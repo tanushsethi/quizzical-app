@@ -6,3 +6,33 @@
   box-sizing: border-box;
   font-family: 'Karla', sans-serif;
 }
+
+.app{
+  height: 100vh;
+  width: 100vw;
+  background-color: #F5F7FB;
+  position: relative;
+  overflow: hidden;
+}
+
+.blob{
+  height: 650px;
+  width: 650px;
+  background-size: contain;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.yellow{
+  background-image: url(./assests/yellow.png);
+  right: 0px;
+  top: 0px;
+  transform: translate(50%, -50%);
+}
+
+.blue {
+  background-image: url(./assests/blue.png);
+  left: 0px;
+  bottom: 0px;
+  transform: translate(-50%, 50%);
+}
