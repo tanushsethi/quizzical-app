@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="app">
       <div className="blob yellow"></div><div className="blob blue"></div>
-      {firstLoaded ? <Overlay setFirstLoaded={setFirstLoaded}/> : <Questions/>}
+      {firstLoaded ? <Overlay setFirstLoaded={() => {setFirstLoaded(false)}}/> : <Questions/>}
     </div>
   );
 }

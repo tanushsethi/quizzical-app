@@ -1,11 +1,11 @@
 import React from "react";
 
-function Overlay() {
+function Overlay(props) {
     return (
         <div className="overlay">
             <h1>Quizzical</h1>
             <p>Quiz on the go!</p>
-            <button>Start Quiz</button>
+            <button onClick={props.setFirstLoaded}>Start Quiz</button>
         </div>
     )
 }
