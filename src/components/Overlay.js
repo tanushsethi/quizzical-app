@@ -5,6 +5,7 @@ function Overlay() {
         <div className="overlay">
             <h1>Quizzical</h1>
             <p>Quiz on the go!</p>
+            <button>Start Quiz</button>
         </div>
     )
 }
