@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Karla&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Karla&display=swap');
 
 *{
   margin: 0px;
@@ -13,6 +14,10 @@
   background-color: #F5F7FB;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .blob{
