@@ -41,3 +41,14 @@
   bottom: 0px;
   transform: translate(-50%, 50%);
 }
+
+.overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h1{
+  font-family: 'Inter', sans-serif;
+}
