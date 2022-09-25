@@ -11,6 +11,7 @@ function Questions(){
     function preProcess(data){
         var processedArray = data.results.map((item)=>{
             return {
+                "id": nanoid(),
                 "question": item.question,
                 "options": {
                     "option1": item.correct_answer,
@@ -33,7 +34,34 @@ function Questions(){
 
     console.log(questions);
 
-    
+    // function changeSelected(id , optionString){
+    //     setQuestion(()=>{
+    //         return questions.map((item)={
+    //             return (
+    //                 {}
+    //             )
+    //         })
+    //     })
+    // }
+
+    function changeSelected(id, optionString){
+        setQuestion((currentState)=>{
+            return currentState.map((item)=>{
+                var newObj = (item.id === id) ? { ...item, selectedOption : optionString } : item;
+                return newObj;
+            });
+        })
+    }
+
+    var elementArray = questions.map((item)=>{
+        return(
+            <Question
+                key = {item.id}
+                {...item}
+                changeSelected = {changeSelected} 
+            />
+        )
+    })
 
     // var elementArray = questions.map((item) => {
     //     var optionsArray = [item.correct_answer, ...item.incorrect_answers];
@@ -51,7 +79,7 @@ function Questions(){
     
     return(
         <div className="questions">
-            {/* {elementArray} */}
+            {elementArray}
             <button>Submit</button>
         </div>
     )

@@ -2,6 +2,7 @@ import { nanoid } from "nanoid"
 
 var defaultData = [
     {
+        "id": nanoid(),
         "question": "Loading...",
         "options": {
             "option1": "Loading...",
@@ -13,6 +14,7 @@ var defaultData = [
         "selectedOption": "None"
     },
     {
+        "id": nanoid(),
         "question": "Loading...",
         "options": {
             "option1": "Loading...",
@@ -24,6 +26,7 @@ var defaultData = [
         "selectedOption": "None"
     },
     {
+        "id": nanoid(),
         "question": "Loading...",
         "options": {
             "option1": "Loading...",
@@ -35,6 +38,7 @@ var defaultData = [
         "selectedOption": "None"
     },
     {
+        "id": nanoid(),
         "question": "Loading...",
         "options": {
             "option1": "Loading...",
@@ -46,6 +50,7 @@ var defaultData = [
         "selectedOption": "None"
     },
     {
+        "id": nanoid(),
         "question": "Loading...",
         "options": {
             "option1": "Loading...",

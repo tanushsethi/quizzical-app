@@ -5,7 +5,7 @@ import Questions from "./components/Ouestions"
 
 function App() {
 
-  const [firstLoaded, setFirstLoaded] = useState(true);
+  const [firstLoaded, setFirstLoaded] = useState(false);
 
   return (
     <div className="app">
