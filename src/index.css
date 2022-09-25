@@ -125,3 +125,15 @@
   border: none;
   color: #293264;
 }
+
+.incorrect{
+    background-color: #F8BCBC;;
+    border: none;
+    color: #293264;
+}
+
+.correct {
+  background-color: #94D7A2;
+  border: none;
+  color: #293264;
+}

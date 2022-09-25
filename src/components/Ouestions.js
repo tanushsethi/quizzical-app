@@ -7,6 +7,7 @@ import { nanoid } from "nanoid"
 function Questions(){
 
     const [questions, setQuestion] = useState(data);
+    const [gameOver, setGameOver] = useState(false);
 
     function preProcess(data){
         var processedArray = data.results.map((item)=>{
@@ -34,15 +35,15 @@ function Questions(){
 
     console.log(questions);
 
-    // function changeSelected(id , optionString){
-    //     setQuestion(()=>{
-    //         return questions.map((item)={
-    //             return (
-    //                 {}
-    //             )
-    //         })
-    //     })
-    // }
+    function checkSubmission(){
+        setGameOver(true);
+        // setQuestion((currentState) => {
+        //     return currentState.map((item) => {
+        //         var newObj = (item.id === id) ? { ...item, selectedOption: optionString } : item;
+        //         return newObj;
+        //     });
+        // })
+    }
 
     function changeSelected(id, optionString){
         setQuestion((currentState)=>{
@@ -59,6 +60,7 @@ function Questions(){
                 key = {item.id}
                 {...item}
                 changeSelected = {changeSelected} 
+                gameOver = {gameOver}
             />
         )
     })
@@ -80,7 +82,7 @@ function Questions(){
     return(
         <div className="questions">
             {elementArray}
-            <button>Submit</button>
+            <button onClick={checkSubmission}>Submit</button>
         </div>
     )
 }
