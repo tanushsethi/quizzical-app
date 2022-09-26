@@ -86,7 +86,8 @@
   position: relative;
   width: 650px;
   overflow-y: scroll;
-  margin:80px ;
+  /* margin:80px 80px 0px 80px; */
+  padding: 80px 0px;
 }
 
 .questions h1{
@@ -127,13 +128,30 @@
 }
 
 .incorrect{
+    border: 1px solid #4d5b9e00;
     background-color: #F8BCBC;;
     border: none;
     color: #293264;
 }
 
 .correct {
+  border: 1px solid #4d5b9e00;
   background-color: #94D7A2;
   border: none;
   color: #293264;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+}
+
+.submit{
+  margin-top: 30px;
+  height: 60px;
+  width: 180px;
+  border: none;
+  background-color: #4D5B9E;
+  color: white;
+  border-radius: 30px;
 }

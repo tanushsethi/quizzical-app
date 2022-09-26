@@ -6,6 +6,7 @@ import { nanoid } from "nanoid"
 
 function Questions(){
 
+    const [isLoading, setIsLoading] = useState(true);
     const [questions, setQuestion] = useState(data);
     const [gameOver, setGameOver] = useState(false);
 
@@ -25,6 +26,7 @@ function Questions(){
             }
         })
         setQuestion(processedArray)
+        setIsLoading(false);
     }
 
     useEffect(()=>{
@@ -32,6 +34,11 @@ function Questions(){
             .then(res => res.json())
             .then(data => preProcess(data))
     },[]);
+
+
+    // useEffect(()=>(
+    //     setIsLoading(false)
+    // ), [])
 
     console.log(questions);
 
@@ -78,11 +85,23 @@ function Questions(){
     //     )
     // })
 
+    var content;
+    if(isLoading){
+        content = <div className="loader">
+                        <h1>Loading...</h1>
+                  </div>;
+    }else{
+        content = <>
+                    {elementArray}
+                    < div className = "footer" >
+                        <button className="submit" onClick={checkSubmission}>Check Answers</button>
+                    </div >
+                </>
+    }
     
     return(
         <div className="questions">
-            {elementArray}
-            <button onClick={checkSubmission}>Submit</button>
+            {content}
         </div>
     )
 }
