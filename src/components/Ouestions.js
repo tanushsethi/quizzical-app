@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import data from "../defaultData";
-import { shuffle } from "../helperFunctions";
 import Question from "./Question";
 import { nanoid } from "nanoid"
+import { shuffle } from "../helperFunctions";
 
 function Questions(){
 
@@ -15,12 +15,12 @@ function Questions(){
             return {
                 "id": nanoid(),
                 "question": item.question,
-                "options": {
-                    "option1": item.correct_answer,
-                    "option2": item.incorrect_answers[0],
-                    "option3": item.incorrect_answers[1],
-                    "option4": item.incorrect_answers[2]
-                },
+                "options": shuffle([
+                    item.correct_answer,
+                    item.incorrect_answers[0],
+                    item.incorrect_answers[1],
+                    item.incorrect_answers[2]
+                ]),
                 "correctOption": item.correct_answer,
                 "selectedOption": null
             }

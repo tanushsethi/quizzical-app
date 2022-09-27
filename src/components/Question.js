@@ -1,7 +1,6 @@
 import React from "react";
 
 function Question(props){
-    var classString = props.selectedOption === props.options.option1
 
     function handleClick(event){
         props.changeSelected(props.id, event.target.innerText);
@@ -21,10 +20,10 @@ function Question(props){
         <div className="question">
             <h1>{props.question}</h1>
             <div className="options">
-                <button className={matchCorrect(props.options.option1)} onClick={handleClick}>{props.options.option1}</button>
-                <button className={matchCorrect(props.options.option2)} onClick={handleClick} >{props.options.option2}</button>
-                <button className={matchCorrect(props.options.option3)} onClick={handleClick}>{props.options.option3}</button>
-                <button className={matchCorrect(props.options.option4)} onClick={handleClick}>{props.options.option4}</button>
+                <button className={matchCorrect(props.options[0])} onClick={handleClick}>{props.options[0]}</button>
+                <button className={matchCorrect(props.options[1])} onClick={handleClick} >{props.options[1]}</button>
+                <button className={matchCorrect(props.options[2])} onClick={handleClick}>{props.options[2]}</button>
+                <button className={matchCorrect(props.options[3])} onClick={handleClick}>{props.options[3]}</button>
             </div>
             <div className="line"></div>
         </div>
