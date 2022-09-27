@@ -20,10 +20,10 @@ function Question(props){
         <div className="question">
             <h1>{props.question}</h1>
             <div className="options">
-                <button className={matchCorrect(props.options[0])} onClick={handleClick}>{props.options[0]}</button>
-                <button className={matchCorrect(props.options[1])} onClick={handleClick} >{props.options[1]}</button>
-                <button className={matchCorrect(props.options[2])} onClick={handleClick}>{props.options[2]}</button>
-                <button className={matchCorrect(props.options[3])} onClick={handleClick}>{props.options[3]}</button>
+                <button className={matchCorrect(props.options[0])} disabled={props.gameOver ? true : false} onClick={handleClick}>{props.options[0]}</button>
+                <button className={matchCorrect(props.options[1])} disabled={props.gameOver ? true : false} onClick={handleClick} >{props.options[1]}</button>
+                <button className={matchCorrect(props.options[2])} disabled={props.gameOver ? true : false} onClick={handleClick}>{props.options[2]}</button>
+                <button className={matchCorrect(props.options[3])} disabled={props.gameOver ? true : false} onClick={handleClick}>{props.options[3]}</button>
             </div>
             <div className="line"></div>
         </div>
