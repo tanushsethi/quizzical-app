@@ -6,15 +6,15 @@ import { shuffle } from "../helperFunctions";
 
 function Questions(){
 
-    console.log("rendred");
-
+    
     const [isLoading, setIsLoading] = useState(true);
     const [questions, setQuestion] = useState(data);
     const [gameOver, setGameOver] = useState(false);
     const [playCount, setPlayCount] = useState(1);
-
+    
     useEffect(()=>{
-
+        
+        console.log("rendred");
         function decodeHTMLEntities(text) {
             let textArea = document.createElement('textarea');
             textArea.innerHTML = text;
