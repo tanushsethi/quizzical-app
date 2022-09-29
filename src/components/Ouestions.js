@@ -104,8 +104,8 @@ function Questions(){
     var content;
     if(isLoading){
         content = <div className="loaderCon">
-                    <div class="loader">
-                        <div class="spinner" aria-hidden="true"></div>
+                    <div className="loader">
+                        <div className="spinner" aria-hidden="true"></div>
                     </div>
                 </div>;
     }else{
