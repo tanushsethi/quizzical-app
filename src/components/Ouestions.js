@@ -103,9 +103,11 @@ function Questions(){
 
     var content;
     if(isLoading){
-        content = <div className="loader">
-                        <h1>Loading...</h1>
-                  </div>;
+        content = <div className="loaderCon">
+                    <div class="loader">
+                        <div class="spinner" aria-hidden="true"></div>
+                    </div>
+                </div>;
     }else{
         content = <>
                     <p>Quiz Number: {playCount}</p>
