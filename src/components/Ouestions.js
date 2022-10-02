@@ -60,7 +60,7 @@ function Questions(){
     function changeSelected(id, optionString){
         setQuestion((currentState)=>{
             return currentState.map((item)=>{
-                var newObj = (item.id === id) ? { ...item, selectedOption : optionString } : item;
+                var newObj = (item.id === id) ? item.selectedOption === optionString ? { ...item, selectedOption: null } : { ...item, selectedOption : optionString } : item;
                 return newObj;
             });
         })
