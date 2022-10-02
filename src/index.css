@@ -121,21 +121,19 @@ body{
 
 .selected{
   background-color: #D6DBF5;
-  border: none;
+  border: 1px solid #D6DBF5;
   color: #293264;
 }
 
 .incorrect{
-    border: 1px solid #4d5b9e00;
-    background-color: #F8BCBC;;
-    border: none;
+    background-color: #F8BCBC;
+    border: 1px solid #F8BCBC;
     color: #293264;
 }
 
 .correct {
-  border: 1px solid #4d5b9e00;
   background-color: #94D7A2;
-  border: none;
+  border: 1px solid #94D7A2;
   color: #293264;
 }
 

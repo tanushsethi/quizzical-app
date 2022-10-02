@@ -6,7 +6,6 @@ import { shuffle } from "../helperFunctions";
 
 function Questions(){
 
-    
     const [isLoading, setIsLoading] = useState(true);
     const [questions, setQuestion] = useState(data);
     const [gameOver, setGameOver] = useState(false);
@@ -32,7 +31,7 @@ function Questions(){
                         decodeHTMLEntities(item.incorrect_answers[1]),
                         decodeHTMLEntities(item.incorrect_answers[2])
                     ]),
-                    "correctOption": item.correct_answer,
+                    "correctOption": decodeHTMLEntities(item.correct_answer),
                     "selectedOption": null
                 }
             })
