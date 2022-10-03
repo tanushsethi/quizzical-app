@@ -61,6 +61,11 @@ body{
 
 .overlay h1{
   font-size: 60px;
+  transition: 0.3s all ease-in-out;
+}
+
+.overlay h1:hover{
+  letter-spacing: 5px;
 }
 
 .overlay p{
@@ -77,6 +82,10 @@ body{
   border: none;
   height: 70px;
   width: 230px;
+}
+
+.overlay button:hover{
+  background-color: #3c4986;
 }
 
 .questions{
@@ -119,19 +128,31 @@ body{
   color: #4D5B9E;
 }
 
-.selected{
+.option:hover{
+  background-color: #d6dbf572;
+}
+
+.optionGameOver:hover{
+  background: none;
+  
+}
+
+.selected,
+.selected:hover{
   background-color: #D6DBF5;
   border: 1px solid #D6DBF5;
   color: #293264;
 }
 
-.incorrect{
+.incorrect,
+.incorrect:hover{
     background-color: #F8BCBC;
     border: 1px solid #F8BCBC;
     color: #293264;
 }
 
-.correct {
+.correct,
+.correct:hover {
   background-color: #94D7A2;
   border: 1px solid #94D7A2;
   color: #293264;

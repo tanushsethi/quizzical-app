@@ -9,6 +9,7 @@ function Question(props){
     function matchCorrect(buttonText){
         var classString = "option"
         if (props.gameOver){
+            classString = " option optionGameOver"
             classString = classString + `${props.selectedOption === buttonText ? " incorrect" : ""}${props.correctOption === buttonText ? " correct" : ""}`;
         }else{
             classString = classString + `${props.selectedOption === buttonText ? " selected" : ""}`;
